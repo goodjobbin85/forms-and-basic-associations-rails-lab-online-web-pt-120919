@@ -1,3 +1,10 @@
 <h1>Songs#show</h1>
 
 Title: <%= @song.title %>
+Genre: <%= @song.genre_name %>
+
+<h1>Notes</h1>
+<%= @song.note_contents.each do |note| %>
+  <p>in block</p>
+  <%= note.content if note %>
+<% end %>
